@@ -73,4 +73,11 @@ for i in range(n):
     print(matrix[i], end=" ")
     print(column_of_free_members[i])
 
-metod_kramera(n, matrix, column_of_free_members)
+if n == 1 and matrix[0] != 0:
+    print(f"Решение: \nx = {column_of_free_members[0]/matrix[0][0]}")
+
+elif n == 1 and matrix[0] == 0:
+    print("Нет решения")
+
+else:
+    metod_kramera(n, matrix, column_of_free_members)
